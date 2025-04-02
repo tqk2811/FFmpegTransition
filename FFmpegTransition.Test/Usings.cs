@@ -1,0 +1,10 @@
+global using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using FFmpegArgs;
+global using FFmpegArgs.Cores.Interfaces;
+global using FFmpegArgs.Cores.Maps;
+global using FFmpegArgs.Executes;
+global using FFmpegArgs.Inputs;
+global using FFmpegArgs.Outputs;
+global using FFmpegTransition.Interfaces;
+global using System;
+global using System.Linq;
