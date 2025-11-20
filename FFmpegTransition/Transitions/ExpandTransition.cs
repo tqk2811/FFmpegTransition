@@ -9,7 +9,6 @@ namespace FFmpegTransition.Transitions
 {
     public class ExpandTransition : ITransition
     {
-        public bool IsConcat { get; } = false;
         readonly CollapseExpandMode collapseExpandMode;
         public ExpandTransition(CollapseExpandMode collapseExpandMode)
         {

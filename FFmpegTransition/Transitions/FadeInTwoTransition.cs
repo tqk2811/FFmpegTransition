@@ -9,7 +9,6 @@ namespace FFmpegTransition.Transitions
 {
     public class FadeInTwoTransition : ITransition
     {
-        public bool IsConcat { get; } = true;
         public ImageMap MakeTransition(ImageMap first_imageMap, ImageMap second_imageMap, TimeSpan totalDuration, double fps)
         {
             TimeSpan stepDuration = TimeSpan.FromSeconds(totalDuration.TotalSeconds / 2);

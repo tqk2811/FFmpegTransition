@@ -8,7 +8,6 @@ namespace FFmpegTransition.Transitions
 {
     public class ClockTransition : ITransition
     {
-        public bool IsConcat { get; } = false;
         public bool Contrary { get; set; } = false;
         public ImageMap MakeTransition(ImageMap first_imageMap, ImageMap second_imageMap, TimeSpan totalDuration, double fps)
         {
