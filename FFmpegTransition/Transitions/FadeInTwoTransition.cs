@@ -1,5 +1,5 @@
 ﻿using FFmpegArgs.Cores.Maps;
-using FFmpegArgs.Filters.MultimediaFilters;
+using FFmpegArgs.Filters.Multimedia;
 using FFmpegArgs.Filters.VideoFilters;
 using FFmpegTransition.Interfaces;
 using System;
