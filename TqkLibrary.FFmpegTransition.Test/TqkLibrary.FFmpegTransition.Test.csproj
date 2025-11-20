@@ -16,7 +16,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\FFmpegTransition\TqkLibrary.FFmpegTransition.csproj" />
 	  <ProjectReference Include="..\TqkLibrary.FFmpegTransition\TqkLibrary.FFmpegTransition.csproj" />
 	</ItemGroup>
 
