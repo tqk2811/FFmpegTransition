@@ -10,10 +10,8 @@ namespace TqkLibrary.FFmpegTransition.Test
     [TestClass]
     public class TransitionTest
     {
-        readonly TimeSpan duration;
         public TransitionTest()
         {
-            duration = TimeSpan.FromSeconds(2);
         }
 
         void Render(ITransition translation, params string[] filenames)
@@ -24,22 +22,25 @@ namespace TqkLibrary.FFmpegTransition.Test
             };
             names.AddRange(filenames);
 
+            TimeSpan totalDuration = TimeSpan.FromSeconds(2);
+            TimeSpan stepDuration = translation.IsConcat ? totalDuration / 2 : totalDuration;
+
             FFmpegArg ffmpegArg = new FFmpegArg().OverWriteOutput();
 
             ImageMap first_map = ffmpegArg
-                .AddImagesInput(new ImageFileInput(".\\Resources\\Acro Trip ED.mp4").Duration(duration))
+                .AddImagesInput(new ImageFileInput(".\\Resources\\Acro Trip ED.mp4").Duration(stepDuration))
                 .First()
                 .FpsFilter()
                     .Fps(24).MapOut;
 
             ImageMap second_map = ffmpegArg
-                .AddImagesInput(new ImageFileInput(".\\Resources\\Mayonaka Punch OP.mp4").Duration(duration))
+                .AddImagesInput(new ImageFileInput(".\\Resources\\Mayonaka Punch OP.mp4").Duration(stepDuration))
                 .First()
                 .FpsFilter()
                     .Fps(24).MapOut;
 
-            ImageMap imageMap = translation.MakeTransition(first_map, second_map, duration, 24);
-            imageMap = imageMap.TrimFilter().Duration(duration).MapOut;
+            ImageMap imageMap = translation.MakeTransition(first_map, second_map, totalDuration, 24);
+            imageMap = imageMap.TrimFilter().Duration(totalDuration).MapOut;
 
             ffmpegArg.AddOutput(new ImageFileOutput($"{string.Join(".", names)}.mp4", imageMap).AndSet(x => x.ImageOutputAVStream.Fps(24)));
 
