@@ -8,6 +8,8 @@ namespace TqkLibrary.FFmpegTransition.Transitions
 {
     public class CrossFadeTransition : ITransition
     {
+        public bool IsConcat { get; } = false;
+
         public ImageMap MakeTransition(ImageMap first_imageMap, ImageMap second_imageMap, TimeSpan totalDuration, double fps)
         {
             var fade_out = first_imageMap
