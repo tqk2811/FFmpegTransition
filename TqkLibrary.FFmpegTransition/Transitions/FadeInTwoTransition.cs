@@ -1,11 +1,11 @@
 ﻿using FFmpegArgs.Cores.Maps;
 using FFmpegArgs.Filters.Multimedia;
 using FFmpegArgs.Filters.VideoFilters;
-using FFmpegTransition.Interfaces;
 using System;
 using System.Linq;
+using TqkLibrary.FFmpegTransition.Interfaces;
 
-namespace FFmpegTransition.Transitions
+namespace TqkLibrary.FFmpegTransition.Transitions
 {
     public class FadeInTwoTransition : ITransition
     {

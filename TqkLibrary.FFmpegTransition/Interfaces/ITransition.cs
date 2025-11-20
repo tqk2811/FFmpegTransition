@@ -1,7 +1,7 @@
 ﻿using FFmpegArgs.Cores.Maps;
 using System;
 
-namespace FFmpegTransition.Interfaces
+namespace TqkLibrary.FFmpegTransition.Interfaces
 {
     public interface ITransition
     {

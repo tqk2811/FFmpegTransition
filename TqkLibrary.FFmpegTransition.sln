@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFmpegTransition", "FFmpegTransition\FFmpegTransition.csproj", "{C80B1F2A-684E-47BF-B370-B63870F487A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TqkLibrary.FFmpegTransition", "TqkLibrary.FFmpegTransition\TqkLibrary.FFmpegTransition.csproj", "{C80B1F2A-684E-47BF-B370-B63870F487A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFmpegTransition.Test", "FFmpegTransition.Test\FFmpegTransition.Test.csproj", "{D53D262A-F5A6-DCEB-BA9C-534B5EDF1C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TqkLibrary.FFmpegTransition.Test", "TqkLibrary.FFmpegTransition.Test\TqkLibrary.FFmpegTransition.Test.csproj", "{D53D262A-F5A6-DCEB-BA9C-534B5EDF1C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

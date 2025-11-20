@@ -1,21 +1,19 @@
 using FFmpegArgs.Filters.VideoFilters;
-using FFmpegTransition.Enums;
-using FFmpegTransition.Interfaces;
-using FFmpegTransition.Transitions;
 using System.Collections.Generic;
 using System.IO;
+using TqkLibrary.FFmpegTransition.Enums;
+using TqkLibrary.FFmpegTransition.Interfaces;
+using TqkLibrary.FFmpegTransition.Transitions;
 
-namespace FFmpegTransition.Test
+namespace TqkLibrary.FFmpegTransition.Test
 {
     [TestClass]
     public class TransitionTest
     {
         readonly TimeSpan duration;
-        readonly TimeSpan halfDuration;
         public TransitionTest()
         {
             duration = TimeSpan.FromSeconds(2);
-            halfDuration = TimeSpan.FromSeconds(duration.TotalSeconds / 2);
         }
 
         void Render(ITransition translation, params string[] filenames)
@@ -26,18 +24,16 @@ namespace FFmpegTransition.Test
             };
             names.AddRange(filenames);
 
-            TimeSpan itemDuration = translation.IsConcat ? halfDuration : duration;
-
             FFmpegArg ffmpegArg = new FFmpegArg().OverWriteOutput();
 
             ImageMap first_map = ffmpegArg
-                .AddImagesInput(new ImageFileInput(".\\Resources\\Acro Trip ED.mp4").Duration(itemDuration))
+                .AddImagesInput(new ImageFileInput(".\\Resources\\Acro Trip ED.mp4").Duration(duration))
                 .First()
                 .FpsFilter()
                     .Fps(24).MapOut;
 
             ImageMap second_map = ffmpegArg
-                .AddImagesInput(new ImageFileInput(".\\Resources\\Mayonaka Punch OP.mp4").Duration(itemDuration))
+                .AddImagesInput(new ImageFileInput(".\\Resources\\Mayonaka Punch OP.mp4").Duration(duration))
                 .First()
                 .FpsFilter()
                     .Fps(24).MapOut;

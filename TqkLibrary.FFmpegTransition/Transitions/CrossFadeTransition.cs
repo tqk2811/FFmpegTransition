@@ -1,10 +1,10 @@
 ﻿using FFmpegArgs.Cores.Enums;
 using FFmpegArgs.Cores.Maps;
 using FFmpegArgs.Filters.VideoFilters;
-using FFmpegTransition.Interfaces;
 using System;
+using TqkLibrary.FFmpegTransition.Interfaces;
 
-namespace FFmpegTransition.Transitions
+namespace TqkLibrary.FFmpegTransition.Transitions
 {
     public class CrossFadeTransition : ITransition
     {

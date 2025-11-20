@@ -1,4 +1,4 @@
-﻿namespace FFmpegTransition.Enums
+﻿namespace TqkLibrary.FFmpegTransition.Enums
 {
     public enum CollapseExpandMode
     {
